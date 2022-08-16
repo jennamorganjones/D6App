@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FirstFragment">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navigationIcon="@drawable/ic_baseline_menu_24"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        app:navigationIcon="@drawable/ic_baseline_info_24"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <Button
+        android:id="@+id/start_tour"
+        android:layout_width="203dp"
+        android:layout_height="58dp"
+        android:layout_marginTop="24dp"
+        android:text="Start Tour"
+        app:layout_centerInParent="true"
+        app:layout_constraintTop_toBottomOf="@+id/image_map"
+        app:layout_constraintTop_toEndOf="@+id/image_map"
+        tools:layout_editor_absoluteX="71dp" />
+
+    <Button
+        android:id="@+id/visit_website"
+        android:layout_width="268dp"
+        android:layout_height="61dp"
+        android:layout_marginTop="24dp"
+        android:text="Visit Website"
+        app:layout_centerInParent="true"
+        app:layout_constraintTop_toBottomOf="@+id/image_website"
+        tools:layout_editor_absoluteX="71dp" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/download"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="212dp"
+        android:layout_marginTop="180dp"
+        android:background="@android:color/transparent"
+        android:clickable="true"
+        android:src="@drawable/ic_baseline_arrow_circle_down_24"
+        app:layout_constraintLeft_toRighSidetOf="@id/start_tour"
+        app:layout_constraintStart_toStartOf="@+id/start_tour"
+        app:layout_constraintTop_toTopOf="@+id/image_map" />
+
+    <ImageView
+        android:id="@+id/image_website"
+        android:layout_width="348dp"
+        android:layout_height="138dp"
+        android:layout_marginTop="24dp"
+        android:src="@drawable/screenshot_2022_08_15_at_21_14_43"
+        app:layout_centerInParent="true"
+        app:layout_constraintTop_toBottomOf="@+id/start_tour"
+        tools:layout_editor_absoluteX="31dp" />
+
+    <ImageView
+        android:id="@+id/image_map"
+        android:layout_width="347dp"
+        android:layout_height="157dp"
+        android:layout_marginTop="24dp"
+        android:src="@drawable/screenshot_2022_08_15_at_21_15_23"
+        app:layout_centerInParent="true"
+        app:layout_constraintBottom_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        tools:layout_editor_absoluteX="32dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
