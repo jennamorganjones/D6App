@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:theme="@style/ThemeOverlay.HomePage.FullscreenContainer"
+    tools:context=".splash_screen" >
+
+    <ImageView
+        android:id="@+id/stairs_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/ic_screenshot_2022_08_15_at_20_37_41" />
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="wrap_content"
+        android:layout_height="265dp"
+        app:srcCompat="@drawable/ic_screenshot_2022_08_15_at_21_00_39" />
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="match_parent"
+        android:layout_height="979dp"
+        app:srcCompat="@drawable/ic_screenshot_2022_08_15_at_21_00_24" />
+
+
+</FrameLayout>
