@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/coordinatorLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbarAlwaysDrawHorizontalTrack="false"
+    tools:context=".MainActivity2">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="347dp"
+        android:layout_height="459dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toTopOf="@+id/bottomAppBar2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView11">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="match_parent"
+                android:layout_height="238dp"
+                android:text=" Imperdiet massa tincidunt nunc pulvinar sapien et ligula ullamcorper malesuada. Tortor consequat id porta nibh. Amet porttitor eget dolor morbi non arcu. Tincidunt eget nullam non nisi est sit. Nec dui nunc mattis enim. Quis lectus nulla at volutpat diam ut venenatis tellus in. Condimentum vitae sapien pellentesque habitant morbi tristique senectus et. Tellus molestie nunc non blandit massa enim nec dui nunc. Montes nascetur ridiculus mus mauris vitae ultricies leo integer. Habitasse platea dictumst quisque sagittis purus sit amet"
+                android:textAlignment="center"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="423dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="162dp"
+                    android:layout_height="402dp"
+                    android:text=" Imperdiet massa tincidunt nunc pulvinar sapien et ligula ullamcorper malesuada. Tortor consequat id porta nibh. Amet porttitor eget dolor morbi non arcu. Tincidunt eget nullam non nisi est sit. Nec dui nunc mattis enim. Quis lectus nulla at volutpat diam ut venenatis tellus in. Condimentum vitae sapien pellentesque habitant morbi tristique senectus et. Tellus molestie nunc non blandit massa enim nec dui nunc. Montes nascetur ridiculus mus mauris vitae ultricies leo integer. Habitasse platea dictumst quisque sagittis purus sit amet"
+                    android:textAlignment="center"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/textView10"
+                    android:layout_width="21dp"
+                    android:layout_height="34dp"
+                    android:layout_weight="1"
+                    android:text="    " />
+
+                <androidx.constraintlayout.utils.widget.MockView
+                    android:id="@+id/mockView2"
+                    android:layout_width="173dp"
+                    android:layout_height="382dp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=" Imperdiet massa tincidunt nunc pulvinar sapien et ligula ullamcorper malesuada. Tortor consequat id porta nibh. Amet porttitor eget dolor morbi non arcu. Tincidunt eget nullam non nisi est sit. Nec dui nunc mattis enim. Quis lectus nulla at volutpat diam ut venenatis tellus in. Condimentum vitae sapien pellentesque habitant morbi tristique senectus et. Tellus molestie nunc non blandit massa enim nec dui nunc. Montes nascetur ridiculus mus mauris vitae ultricies leo integer. Habitasse platea dictumst quisque sagittis purus sit amet"
+                android:textAlignment="center"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=" Imperdiet massa tincidunt nunc pulvinar sapien et ligula ullamcorper malesuada. Tortor consequat id porta nibh. Amet porttitor eget dolor morbi non arcu. Tincidunt eget nullam non nisi est sit. Nec dui nunc mattis enim. Quis lectus nulla at volutpat diam ut venenatis tellus in. Condimentum vitae sapien pellentesque habitant morbi tristique senectus et. Tellus molestie nunc non blandit massa enim nec dui nunc. Montes nascetur ridiculus mus mauris vitae ultricies leo integer. Habitasse platea dictumst quisque sagittis purus sit amet"
+                android:textAlignment="center"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar2"
+        android:layout_width="414dp"
+        android:layout_height="59dp"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navigationIcon="@drawable/ic_baseline_menu_24"
+        tools:layout_editor_absoluteX="-4dp" />
+
+    <com.google.android.material.bottomappbar.BottomAppBar
+        android:id="@+id/bottomAppBar2"
+        style="@style/Widget.MaterialComponents.BottomAppBar.Colored"
+        android:layout_width="418dp"
+        android:layout_height="57dp"
+        android:layout_gravity="bottom"
+        android:clickable="false"
+        app:fabAlignmentMode="end"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar2"
+        app:layout_constraintVertical_bias="1.0"
+        app:navigationIcon="@drawable/ic_baseline_info_24"
+        tools:layout_editor_absoluteX="1dp" />
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="542dp"
+        android:layout_height="264dp"
+        android:scaleType="centerCrop"
+        app:srcCompat="@mipmap/ic_white_background_foreground"
+        tools:layout_editor_absoluteX="-25dp"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="389dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="44dp"
+        android:fontFamily="sans-serif-condensed-light"
+        android:text="St Mark's Church"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="#B7000000"
+        android:textSize="48sp"
+        android:typeface="normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar2" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:layout_marginBottom="52dp"
+        android:fontFamily="@font/montserrat_alternates_medium"
+        android:text="Subheading"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView8"
+        app:layout_constraintVertical_bias="0.17" />
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#00FFFFFF"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbar2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.955"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.592"
+        app:srcCompat="@android:drawable/ic_menu_revert" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

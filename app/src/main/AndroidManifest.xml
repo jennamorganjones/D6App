@@ -14,6 +14,11 @@
         android:theme="@style/Theme.D6_Hannah_java"
         tools:targetApi="31">
         <activity
+            android:name=".MainActivity3"
+            android:exported="false"
+            android:label="MainActivity3"
+            android:theme="@style/Theme.D6_Hannah_java.NoActionBar" />
+        <activity
             android:name=".MainActivity2"
             android:exported="false"
             android:label="@string/title_activity_main2"
@@ -32,5 +37,7 @@
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
     </application>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
 
 </manifest>

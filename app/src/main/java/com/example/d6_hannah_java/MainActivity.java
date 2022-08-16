@@ -12,6 +12,8 @@ import android.widget.VideoView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
 import java.util.ArrayList;
 
 public class MainActivity
@@ -21,6 +23,7 @@ public class MainActivity
     VideoView vw;
     ArrayList<Integer> videolist = new ArrayList<>();
     int currvideo = 0;
+    Boolean isOn = false;
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
@@ -34,13 +37,75 @@ public class MainActivity
         videolist.add(R.raw.video);
         setVideo(videolist.get(0));
 
-        Button yourButton = (Button) findViewById(R.id.button2);
-
-        yourButton.setOnClickListener(new View.OnClickListener(){
+        //Read More Button
+        Button readMoreButton = (Button) findViewById(R.id.button2);
+        readMoreButton.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
                 startActivity(new Intent(MainActivity.this, MainActivity2.class));
             }
        });
+        //React Button
+        FloatingActionButton reactButton = (FloatingActionButton)findViewById(R.id.floatingActionButton4);
+        reactButton.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v){
+                startActivity(new Intent(MainActivity.this, MainActivity2.class));
+            }
+        });
+
+        //AR Button
+        FloatingActionButton aRButton = (FloatingActionButton) findViewById(R.id.floatingActionButton2);
+        aRButton.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v){
+                startActivity(new Intent(MainActivity.this, MainActivity3.class));
+            }
+        });
+
+        MediaPlayer music = MediaPlayer.create(MainActivity.this, R.raw.soundbite);
+        //Audio Button
+        FloatingActionButton audioButton = (FloatingActionButton) findViewById(R.id.floatingActionButton3);
+        audioButton.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v){
+                vw.pause();
+                music.start();
+                FloatingActionButton pauseButton = (FloatingActionButton) findViewById(R.id.floatingActionButton5);
+                audioButton.setVisibility(View.INVISIBLE);
+                pauseButton.setVisibility(View.VISIBLE);
+            }
+        });
+
+        FloatingActionButton playButton = (FloatingActionButton) findViewById(R.id.floatingActionButton);
+        playButton.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v) {
+
+                music.start();
+                FloatingActionButton pauseButton = (FloatingActionButton) findViewById(R.id.floatingActionButton5);
+                playButton.setVisibility(View.INVISIBLE);
+                pauseButton.setVisibility(View.VISIBLE);
+
+            }
+        });
+
+        FloatingActionButton pauseButton = (FloatingActionButton) findViewById(R.id.floatingActionButton5);
+        pauseButton.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v) {
+                music.pause();
+                FloatingActionButton playButton = (FloatingActionButton) findViewById(R.id.floatingActionButton);
+                pauseButton.setVisibility(View.INVISIBLE);
+                playButton.setVisibility(View.VISIBLE);
+
+            }
+        });
+
+
+        //AR Button
+        FloatingActionButton tourButton = (FloatingActionButton) findViewById(R.id.floatingActionButton1);
+        tourButton.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v){
+                startActivity(new Intent(MainActivity.this, MainActivity2.class));
+            }
+        });
+
+
     }
 
     public void setVideo(int id)
@@ -55,6 +120,7 @@ public class MainActivity
 
     public void onCompletion(MediaPlayer mediaplayer)
     {
+        vw.start();
     }
 
     class MyListener implements DialogInterface.OnClickListener {
